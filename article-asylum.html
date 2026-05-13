@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asylum in the United States — Abascal Law</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --cream: #faf8f4; --warm: #f2ede6; --dark: #2c2420;
+            --mid: #7a706b; --light: #c4b9b2; --border: #e5ddd5;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Jost', Arial, sans-serif;
+        }
+        html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+        body { font-family: var(--sans); font-weight: 300; color: var(--dark); background: var(--cream); line-height: 1.5; }
+        a { color: inherit; text-decoration: none; }
+
+        .t { display: none; }
+        html[data-lang="en"] .t-en { display: revert; }
+        html[data-lang="es"] .t-es { display: revert; }
+
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 2.5rem; background: var(--cream); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .nav-logo { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+        .nav-right { display: flex; align-items: center; gap: 2rem; }
+        .lang-toggle { display: flex; align-items: center; gap: 0.35rem; }
+        .lang-toggle button { background: none; border: none; cursor: pointer; font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.1em; font-weight: 400; color: var(--light); padding: 0; transition: color 0.2s; }
+        .lang-toggle button.active { color: var(--dark); }
+        .lang-toggle .sep { color: var(--border); font-size: 0.65rem; }
+        .nav-back { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid var(--dark); padding-bottom: 0.1rem; }
+
+        .article-hero { height: 52vh; position: relative; overflow: hidden; background: url('img-flag-warm.jpg') center / cover no-repeat; }
+        .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(30,20,14,0.3) 0%, rgba(20,12,8,0.72) 100%); }
+        .article-hero-content { position: absolute; bottom: 3rem; left: 2.5rem; right: 2.5rem; z-index: 1; color: var(--cream); }
+        .article-category { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.75rem; }
+        .article-title { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 4rem); font-weight: 300; line-height: 1.06; max-width: 22ch; }
+        .article-title em { font-style: italic; }
+
+        .article-body { max-width: 740px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+        .article-meta { display: flex; align-items: center; gap: 2rem; font-size: 0.65rem; letter-spacing: 0.08em; color: var(--mid); margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+        .article-body h2 { font-family: var(--serif); font-size: 1.65rem; font-weight: 400; line-height: 1.2; margin: 2.5rem 0 0.85rem; }
+        .article-body h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; margin: 1.75rem 0 0.6rem; }
+        .article-body p { font-size: 1.05rem; line-height: 1.95; color: #3e3530; margin-bottom: 1.25rem; }
+        .article-body ul { margin: 0.75rem 0 1.25rem 0; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+        .article-body ul li { font-size: 1rem; line-height: 1.75; color: #3e3530; padding-left: 1.5rem; position: relative; }
+        .article-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--light); }
+        .article-body strong { font-weight: 500; color: var(--dark); }
+        .article-callout { border-left: 2px solid var(--dark); padding: 1.25rem 1.5rem; margin: 2rem 0; background: var(--warm); }
+        .article-callout p { margin-bottom: 0; font-style: italic; }
+        .article-cta { margin-top: 3.5rem; padding: 2.5rem; background: var(--dark); color: var(--cream); text-align: center; }
+        .article-cta p { font-size: 0.95rem; color: rgba(250,248,244,0.65); margin-bottom: 1.5rem; line-height: 1.8; }
+        .article-cta h3 { font-family: var(--serif); font-size: 1.65rem; font-weight: 300; margin-bottom: 0.75rem; }
+        .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border: 1px solid rgba(250,248,244,0.35); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); transition: background 0.25s; }
+        .cta-btn:hover { background: rgba(250,248,244,0.1); }
+        @media (max-width: 640px) { nav { padding: 1rem 1.25rem; } .article-hero-content { left: 1.25rem; bottom: 2rem; } .article-body { padding: 3rem 1.25rem 4rem; } .article-meta { gap: 1rem; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="nav-logo" href="index.html">Abascal Law</a>
+    <div class="nav-right">
+        <div class="lang-toggle">
+            <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+            <span class="sep">/</span>
+            <button id="btn-es" onclick="setLang('es')">ES</button>
+        </div>
+        <a class="nav-back" href="index.html#journal">
+            <span class="t t-en">← Back to Journal</span>
+            <span class="t t-es">← Volver al Diario</span>
+        </a>
+    </div>
+</nav>
+
+<div class="article-hero">
+    <div class="article-hero-content">
+        <div class="article-category">
+            <span class="t t-en">Immigration Law · May 13, 2026</span>
+            <span class="t t-es">Derecho Migratorio · 13 de mayo de 2026</span>
+        </div>
+        <h1 class="article-title">
+            <span class="t t-en">Asylum in the United States: <em>understanding</em> the process and your rights</span>
+            <span class="t t-es">Asilo en los Estados Unidos: <em>comprenda</em> el proceso y sus derechos</span>
+        </h1>
+    </div>
+</div>
+
+<div class="article-body">
+    <div class="article-meta">
+        <span>Krysti Abascal, Esq. LL.M.</span>
+        <span>·</span>
+        <span>Abascal Law, PLLC</span>
+        <span>·</span>
+        <span>Doral, Florida</span>
+    </div>
+
+    <p class="t t-en">If you have fled your home country due to persecution, violence, or fear for your safety, you may be eligible to apply for asylum in the United States. Asylum offers legal protection and the possibility of building a new life here — but navigating the process requires careful preparation, an understanding of strict deadlines, and ideally, experienced legal guidance.</p>
+    <p class="t t-es">Si ha huido de su país de origen debido a persecución, violencia o miedo por su seguridad, es posible que sea elegible para solicitar asilo en los Estados Unidos. El asilo ofrece protección legal y la posibilidad de construir una nueva vida aquí — pero navegar este proceso requiere una preparación cuidadosa, comprensión de plazos estrictos y, en lo posible, orientación legal experimentada.</p>
+
+    <p class="t t-en">This article provides a foundational overview of how the U.S. asylum system works, who qualifies, and what you can expect at each stage.</p>
+    <p class="t t-es">Este artículo ofrece una descripción general del funcionamiento del sistema de asilo de EE.UU., quién califica y qué puede esperar en cada etapa.</p>
+
+    <h2 class="t t-en">What Is Asylum?</h2>
+    <h2 class="t t-es">¿Qué Es el Asilo?</h2>
+
+    <p class="t t-en">Asylum is a form of legal protection available to individuals who are already in the United States or at a port of entry and who meet the definition of a "refugee" under U.S. immigration law. A refugee is someone who has suffered persecution — or has a well-founded fear of future persecution — based on one of five protected grounds:</p>
+    <p class="t t-es">El asilo es una forma de protección legal disponible para personas que ya se encuentran en los Estados Unidos o en un puerto de entrada y que cumplen con la definición de "refugiado" según la ley de inmigración de EE.UU. Un refugiado es alguien que ha sufrido persecución — o tiene un temor fundado de persecución futura — basado en una de cinco categorías protegidas:</p>
+
+    <ul class="t t-en">
+        <li><strong>Race</strong></li>
+        <li><strong>Religion</strong></li>
+        <li><strong>Nationality</strong></li>
+        <li><strong>Political opinion</strong></li>
+        <li><strong>Membership in a particular social group</strong></li>
+    </ul>
+    <ul class="t t-es">
+        <li><strong>Raza</strong></li>
+        <li><strong>Religión</strong></li>
+        <li><strong>Nacionalidad</strong></li>
+        <li><strong>Opinión política</strong></li>
+        <li><strong>Pertenencia a un grupo social particular</strong></li>
+    </ul>
+
+    <p class="t t-en">It is important to understand that economic hardship, poverty, or general criminal violence — while tragic — do not independently qualify someone for asylum. The persecution must be connected to one of the five protected grounds and must be carried out by the government or by a group the government cannot or will not control.</p>
+    <p class="t t-es">Es importante entender que las dificultades económicas, la pobreza o la violencia criminal general — aunque trágicas — no califican por sí solas a alguien para el asilo. La persecución debe estar relacionada con una de las cinco categorías protegidas y debe ser perpetrada por el gobierno o por un grupo que el gobierno no puede o no quiere controlar.</p>
+
+    <h2 class="t t-en">The One-Year Filing Deadline</h2>
+    <h2 class="t t-es">El Plazo de Un Año para Presentar la Solicitud</h2>
+
+    <div class="article-callout">
+        <p class="t t-en">You must apply for asylum within <strong>one year of your last arrival</strong> in the United States. Missing this deadline can bar you from receiving asylum, with very limited exceptions.</p>
+        <p class="t t-es">Debe solicitar asilo dentro del <strong>primer año desde su última llegada</strong> a los Estados Unidos. No cumplir con este plazo puede impedirle recibir asilo, con excepciones muy limitadas.</p>
+    </div>
+
+    <p class="t t-en">This is one of the most critical rules in asylum law. The clock begins running from the date you last entered the U.S., regardless of your immigration status at that time. Exceptions exist but are narrow — they apply only where you can demonstrate changed circumstances or extraordinary circumstances that prevented timely filing.</p>
+    <p class="t t-es">Esta es una de las reglas más críticas en la ley de asilo. El plazo comienza a correr desde la fecha en que entró por última vez a EE.UU., independientemente de su estatus migratorio en ese momento. Existen excepciones, pero son estrechas — se aplican solo cuando puede demostrar circunstancias cambiantes o circunstancias extraordinarias que impidieron la presentación oportuna.</p>
+
+    <p class="t t-en">If you believe you may be approaching or past the one-year mark, contact an immigration attorney immediately. Time matters.</p>
+    <p class="t t-es">Si cree que puede estar acercándose o que ya pasó el plazo de un año, comuníquese con un abogado de inmigración de inmediato. El tiempo es crucial.</p>
+
+    <h2 class="t t-en">Two Paths: Affirmative and Defensive Asylum</h2>
+    <h2 class="t t-es">Dos Caminos: Asilo Afirmativo y Asilo Defensivo</h2>
+
+    <h3 class="t t-en">Affirmative Asylum</h3>
+    <h3 class="t t-es">Asilo Afirmativo</h3>
+
+    <p class="t t-en">If you are not currently in removal proceedings, you may apply for asylum affirmatively by filing Form I-589 with U.S. Citizenship and Immigration Services (USCIS). You will be scheduled for an interview with an asylum officer. If approved, you are granted asylum. If denied, your case is typically referred to an immigration judge.</p>
+    <p class="t t-es">Si actualmente no está en procedimientos de remoción, puede solicitar asilo de manera afirmativa presentando el Formulario I-589 ante el Servicio de Ciudadanía e Inmigración de EE.UU. (USCIS). Se le programará una entrevista con un oficial de asilo. Si se aprueba, se le concede el asilo. Si se deniega, su caso generalmente se remite a un juez de inmigración.</p>
+
+    <h3 class="t t-en">Defensive Asylum</h3>
+    <h3 class="t t-es">Asilo Defensivo</h3>
+
+    <p class="t t-en">If you are in removal proceedings, you may raise asylum as a defense before an immigration judge. The process is more adversarial — you present your case in front of a judge, and a government attorney will argue against it. Having legal representation in defensive proceedings is especially important.</p>
+    <p class="t t-es">Si está en procedimientos de remoción, puede alegar el asilo como defensa ante un juez de inmigración. El proceso es más adversarial — presenta su caso frente a un juez, y un abogado del gobierno argumentará en su contra. Tener representación legal en los procedimientos defensivos es especialmente importante.</p>
+
+    <h2 class="t t-en">What You Need to Prove</h2>
+    <h2 class="t t-es">Lo Que Necesita Demostrar</h2>
+
+    <p class="t t-en">To be granted asylum, you must demonstrate:</p>
+    <p class="t t-es">Para que se le conceda el asilo, debe demostrar:</p>
+
+    <ul class="t t-en">
+        <li>You suffered past persecution or have a well-founded fear of future persecution</li>
+        <li>The persecution is or would be carried out by your government, or a group the government cannot control</li>
+        <li>The persecution is connected to one of the five protected grounds</li>
+        <li>You are not barred from asylum (e.g., not convicted of certain crimes, no security risk)</li>
+    </ul>
+    <ul class="t t-es">
+        <li>Sufrió persecución en el pasado o tiene un temor fundado de persecución futura</li>
+        <li>La persecución es o sería llevada a cabo por su gobierno, o por un grupo que el gobierno no puede controlar</li>
+        <li>La persecución está relacionada con una de las cinco categorías protegidas</li>
+        <li>No está inhabilitado para el asilo (p. ej., no fue condenado por ciertos delitos, no representa riesgo de seguridad)</li>
+    </ul>
+
+    <h2 class="t t-en">Benefits of Asylum Status</h2>
+    <h2 class="t t-es">Beneficios del Estatus de Asilo</h2>
+
+    <ul class="t t-en">
+        <li>Protection from deportation to your home country</li>
+        <li>Authorization to work in the United States</li>
+        <li>Eligibility to apply for a Social Security card</li>
+        <li>Ability to petition for your spouse and unmarried children under 21</li>
+        <li>Ability to apply for a green card after one year</li>
+    </ul>
+    <ul class="t t-es">
+        <li>Protección contra la deportación a su país de origen</li>
+        <li>Autorización para trabajar en los Estados Unidos</li>
+        <li>Elegibilidad para solicitar una tarjeta de Seguro Social</li>
+        <li>Capacidad de peticionar por su cónyuge e hijos solteros menores de 21 años</li>
+        <li>Capacidad de solicitar una tarjeta de residencia (green card) después de un año</li>
+    </ul>
+
+    <h2 class="t t-en">Related Forms of Protection</h2>
+    <h2 class="t t-es">Otras Formas de Protección</h2>
+
+    <p class="t t-en">Not everyone who is fleeing danger qualifies for asylum. However, other forms of relief may be available:</p>
+    <p class="t t-es">No todas las personas que huyen del peligro califican para el asilo. Sin embargo, pueden estar disponibles otras formas de alivio:</p>
+
+    <ul class="t t-en">
+        <li><strong>Withholding of Removal</strong> — a higher standard than asylum, but available even if the one-year deadline has passed</li>
+        <li><strong>Convention Against Torture (CAT) Protection</strong> — available to those who face torture if removed, regardless of any protected ground</li>
+        <li><strong>Cancellation of Removal</strong> — for certain long-term residents in removal proceedings</li>
+    </ul>
+    <ul class="t t-es">
+        <li><strong>Suspensión de la Remoción</strong> — un estándar más alto que el asilo, pero disponible incluso si ha pasado el plazo de un año</li>
+        <li><strong>Protección de la Convención contra la Tortura (CAT)</strong> — disponible para quienes enfrentan tortura si son removidos, independientemente de alguna categoría protegida</li>
+        <li><strong>Cancelación de Remoción</strong> — para ciertos residentes de largo plazo en procedimientos de remoción</li>
+    </ul>
+
+    <div class="article-cta">
+        <h3 class="t t-en">Your situation deserves <em>real</em> attention.</h3>
+        <h3 class="t t-es">Su situación merece atención <em>real.</em></h3>
+        <p class="t t-en">Every asylum case is deeply personal. Whether you are just beginning to consider filing or are already in removal proceedings, Abascal Law is here to walk with you through every step — in English and Spanish.</p>
+        <p class="t t-es">Cada caso de asilo es profundamente personal. Ya sea que recién esté considerando presentar su solicitud o que ya se encuentre en procedimientos de remoción, Abascal Law está aquí para acompañarle en cada paso — en inglés y en español.</p>
+        <a class="cta-btn" href="https://abascallaw.as.me/schedule/08b5b297/appointment/90611465/calendar/13793433" target="_blank">
+            <span class="t t-en">Schedule a Free Consultation →</span>
+            <span class="t t-es">Agendar Consulta Gratuita →</span>
+        </a>
+    </div>
+</div>
+
+<script>
+    function setLang(lang) {
+        document.documentElement.setAttribute('data-lang', lang);
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    }
+</script>
+</body>
+</html>

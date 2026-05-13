@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Probate Process in Florida — Abascal Law</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --cream: #faf8f4; --warm: #f2ede6; --dark: #2c2420; --mid: #7a706b; --light: #c4b9b2; --border: #e5ddd5; --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Jost', Arial, sans-serif; }
+        html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+        body { font-family: var(--sans); font-weight: 300; color: var(--dark); background: var(--cream); line-height: 1.5; }
+        a { color: inherit; text-decoration: none; }
+        .t { display: none; }
+        html[data-lang="en"] .t-en { display: revert; }
+        html[data-lang="es"] .t-es { display: revert; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 2.5rem; background: var(--cream); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .nav-logo { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+        .nav-right { display: flex; align-items: center; gap: 2rem; }
+        .lang-toggle { display: flex; align-items: center; gap: 0.35rem; }
+        .lang-toggle button { background: none; border: none; cursor: pointer; font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.1em; font-weight: 400; color: var(--light); padding: 0; transition: color 0.2s; }
+        .lang-toggle button.active { color: var(--dark); }
+        .lang-toggle .sep { color: var(--border); font-size: 0.65rem; }
+        .nav-back { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid var(--dark); padding-bottom: 0.1rem; }
+        .article-hero { height: 52vh; position: relative; overflow: hidden; background: url('img-lawbook-desk.jpg') center / cover no-repeat; }
+        .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(30,20,14,0.3) 0%, rgba(20,12,8,0.72) 100%); }
+        .article-hero-content { position: absolute; bottom: 3rem; left: 2.5rem; right: 2.5rem; z-index: 1; color: var(--cream); }
+        .article-category { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.75rem; }
+        .article-title { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 4rem); font-weight: 300; line-height: 1.06; max-width: 22ch; }
+        .article-title em { font-style: italic; }
+        .article-body { max-width: 740px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+        .article-meta { display: flex; align-items: center; gap: 2rem; font-size: 0.65rem; letter-spacing: 0.08em; color: var(--mid); margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+        .article-body h2 { font-family: var(--serif); font-size: 1.65rem; font-weight: 400; line-height: 1.2; margin: 2.5rem 0 0.85rem; }
+        .article-body h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; margin: 1.75rem 0 0.6rem; }
+        .article-body p { font-size: 1.05rem; line-height: 1.95; color: #3e3530; margin-bottom: 1.25rem; }
+        .article-body ul, .article-body ol { margin: 0.75rem 0 1.25rem 0; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+        .article-body ul li, .article-body ol li { font-size: 1rem; line-height: 1.75; color: #3e3530; padding-left: 1.5rem; position: relative; }
+        .article-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--light); }
+        .article-body ol { counter-reset: steps; }
+        .article-body ol li { counter-increment: steps; }
+        .article-body ol li::before { content: counter(steps) '.'; position: absolute; left: 0; color: var(--mid); font-size: 0.78rem; font-weight: 500; }
+        .article-body strong { font-weight: 500; color: var(--dark); }
+        .article-callout { border-left: 2px solid var(--dark); padding: 1.25rem 1.5rem; margin: 2rem 0; background: var(--warm); }
+        .article-callout p { margin-bottom: 0; font-style: italic; }
+        .article-cta { margin-top: 3.5rem; padding: 2.5rem; background: var(--dark); color: var(--cream); text-align: center; }
+        .article-cta p { font-size: 0.95rem; color: rgba(250,248,244,0.65); margin-bottom: 1.5rem; line-height: 1.8; }
+        .article-cta h3 { font-family: var(--serif); font-size: 1.65rem; font-weight: 300; margin-bottom: 0.75rem; }
+        .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border: 1px solid rgba(250,248,244,0.35); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); transition: background 0.25s; }
+        .cta-btn:hover { background: rgba(250,248,244,0.1); }
+        @media (max-width: 640px) { nav { padding: 1rem 1.25rem; } .article-hero-content { left: 1.25rem; bottom: 2rem; } .article-body { padding: 3rem 1.25rem 4rem; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="nav-logo" href="index.html">Abascal Law</a>
+    <div class="nav-right">
+        <div class="lang-toggle">
+            <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+            <span class="sep">/</span>
+            <button id="btn-es" onclick="setLang('es')">ES</button>
+        </div>
+        <a class="nav-back" href="index.html#journal">
+            <span class="t t-en">← Back to Journal</span>
+            <span class="t t-es">← Volver al Diario</span>
+        </a>
+    </div>
+</nav>
+
+<div class="article-hero">
+    <div class="article-hero-content">
+        <div class="article-category">
+            <span class="t t-en">Estate Planning · February 28, 2026</span>
+            <span class="t t-es">Planificación Patrimonial · 28 de febrero de 2026</span>
+        </div>
+        <h1 class="article-title">
+            <span class="t t-en">The probate process in Florida: a <em>step-by-step</em> guide</span>
+            <span class="t t-es">El proceso de sucesión en Florida: una guía <em>paso a paso</em></span>
+        </h1>
+    </div>
+</div>
+
+<div class="article-body">
+    <div class="article-meta">
+        <span>Krysti Abascal, Esq. LL.M.</span>
+        <span>·</span>
+        <span>Abascal Law, PLLC</span>
+        <span>·</span>
+        <span>Doral, Florida</span>
+    </div>
+
+    <p class="t t-en">Losing a loved one is one of the hardest experiences a family goes through. Managing their estate in the months that follow adds a layer of legal and administrative responsibility that can feel overwhelming — especially when grief is still fresh.</p>
+    <p class="t t-es">Perder a un ser querido es una de las experiencias más difíciles que atraviesa una familia. Administrar su patrimonio en los meses siguientes añade una capa de responsabilidad legal y administrativa que puede sentirse abrumadora — especialmente cuando el duelo aún es reciente.</p>
+
+    <p class="t t-en">Understanding the probate process in Florida can make that process less intimidating. This guide explains what probate is, when it is required, and what to expect at each stage.</p>
+    <p class="t t-es">Comprender el proceso de sucesión en Florida puede hacer que ese proceso sea menos intimidante. Esta guía explica qué es la sucesión, cuándo se requiere y qué puede esperar en cada etapa.</p>
+
+    <h2 class="t t-en">What Is Probate?</h2>
+    <h2 class="t t-es">¿Qué Es la Sucesión?</h2>
+
+    <p class="t t-en">Probate is the court-supervised legal process by which a deceased person's estate is administered. The process involves identifying and inventorying assets, paying outstanding debts and taxes, and distributing what remains to the rightful beneficiaries. In Florida, probate is handled by the circuit court in the county where the decedent lived.</p>
+    <p class="t t-es">La sucesión es el proceso legal supervisado por el tribunal mediante el cual se administra el patrimonio de una persona fallecida. El proceso implica identificar e inventariar los bienes, pagar las deudas e impuestos pendientes, y distribuir lo que queda a los beneficiarios legítimos. En Florida, la sucesión es manejada por el tribunal de circuito en el condado donde vivía el difunto.</p>
+
+    <h2 class="t t-en">When Is Probate Required?</h2>
+    <h2 class="t t-es">¿Cuándo Se Requiere la Sucesión?</h2>
+
+    <p class="t t-en">Probate is required for assets owned solely in the decedent's name with no designated beneficiary. Assets that generally bypass probate include life insurance with named beneficiaries, retirement accounts with beneficiary designations, jointly held property with rights of survivorship, and assets held in a living trust.</p>
+    <p class="t t-es">La sucesión se requiere para los bienes que son propiedad exclusiva del difunto sin beneficiario designado. Los bienes que generalmente evitan la sucesión incluyen seguros de vida con beneficiarios nombrados, cuentas de jubilación con designaciones de beneficiarios, propiedades en copropiedad con derechos de supervivencia y bienes en un fideicomiso en vida.</p>
+
+    <h2 class="t t-en">Two Types of Florida Probate</h2>
+    <h2 class="t t-es">Dos Tipos de Sucesión en Florida</h2>
+
+    <h3 class="t t-en">Formal Administration</h3>
+    <h3 class="t t-es">Administración Formal</h3>
+    <p class="t t-en">The standard process used when the estate exceeds $75,000 or the decedent passed less than two years ago. It involves court filings, appointment of a Personal Representative, and formal notice to creditors. Typically takes six months to a year or more.</p>
+    <p class="t t-es">El proceso estándar utilizado cuando el patrimonio supera los $75,000 o el difunto falleció hace menos de dos años. Implica presentaciones judiciales, nombramiento de un Representante Personal y notificación formal a los acreedores. Generalmente toma de seis meses a un año o más.</p>
+
+    <h3 class="t t-en">Summary Administration</h3>
+    <h3 class="t t-es">Administración Sumaria</h3>
+    <p class="t t-en">A simplified process available when the total probate estate is $75,000 or less, or when the decedent has been dead for more than two years. Faster and less expensive, but not available in all situations.</p>
+    <p class="t t-es">Un proceso simplificado disponible cuando el patrimonio total sujeto a sucesión es de $75,000 o menos, o cuando el difunto lleva más de dos años fallecido. Es más rápido y menos costoso, pero no está disponible en todas las situaciones.</p>
+
+    <h2 class="t t-en">Step-by-Step: The Florida Formal Probate Process</h2>
+    <h2 class="t t-es">Paso a Paso: El Proceso Formal de Sucesión en Florida</h2>
+
+    <ol class="t t-en">
+        <li><strong>File a petition with the probate court.</strong> Submit a Petition for Administration in the circuit court of the county where the decedent resided.</li>
+        <li><strong>Admit the will to probate.</strong> If the decedent left a valid will, it must be submitted to and admitted by the court.</li>
+        <li><strong>Appoint a Personal Representative.</strong> The court appoints someone to manage the estate — typically the person named in the will.</li>
+        <li><strong>Notify creditors.</strong> Publish a Notice to Creditors in a local newspaper for two consecutive weeks and directly notify known creditors. Creditors have 90 days to file a claim.</li>
+        <li><strong>Inventory and appraise assets.</strong> Identify all probate assets, have them appraised if necessary, and file an inventory with the court.</li>
+        <li><strong>Pay valid debts and taxes.</strong> The estate pays debts in the order of priority set by Florida law.</li>
+        <li><strong>File the final accounting.</strong> The Personal Representative files a final accounting showing all assets received, disbursements made, and what remains.</li>
+        <li><strong>Distribute assets to beneficiaries.</strong> After court approval, remaining assets are distributed according to the will or Florida's intestacy laws.</li>
+        <li><strong>Close the estate.</strong> File a Petition for Discharge and the court formally closes the estate.</li>
+    </ol>
+    <ol class="t t-es">
+        <li><strong>Presentar una petición ante el tribunal de sucesiones.</strong> Presentar una Petición de Administración en el tribunal de circuito del condado donde residía el difunto.</li>
+        <li><strong>Admitir el testamento a sucesión.</strong> Si el difunto dejó un testamento válido, debe presentarse ante el tribunal y ser admitido por este.</li>
+        <li><strong>Nombrar un Representante Personal.</strong> El tribunal nombra a alguien para administrar el patrimonio — generalmente la persona nombrada en el testamento.</li>
+        <li><strong>Notificar a los acreedores.</strong> Publicar un Aviso a Acreedores en un periódico local durante dos semanas consecutivas y notificar directamente a los acreedores conocidos. Los acreedores tienen 90 días para presentar una reclamación.</li>
+        <li><strong>Inventariar y tasar los bienes.</strong> Identificar todos los bienes sujetos a sucesión, tasarlos si es necesario y presentar un inventario ante el tribunal.</li>
+        <li><strong>Pagar las deudas e impuestos válidos.</strong> El patrimonio paga las deudas en el orden de prioridad establecido por la ley de Florida.</li>
+        <li><strong>Presentar la contabilidad final.</strong> El Representante Personal presenta una contabilidad final que muestra todos los bienes recibidos, los desembolsos realizados y lo que queda.</li>
+        <li><strong>Distribuir los bienes a los beneficiarios.</strong> Tras la aprobación del tribunal, los bienes restantes se distribuyen según el testamento o las leyes de intestado de Florida.</li>
+        <li><strong>Cerrar el patrimonio.</strong> Presentar una Petición de Descargo y el tribunal cierra formalmente el patrimonio.</li>
+    </ol>
+
+    <h2 class="t t-en">What If There Is No Will?</h2>
+    <h2 class="t t-es">¿Qué Sucede Si No Hay Testamento?</h2>
+
+    <div class="article-callout">
+        <p class="t t-en">When someone dies without a will — called dying "intestate" — Florida's intestacy laws determine who inherits. This may not reflect what the decedent would have wanted, and the process can be more complicated and contested.</p>
+        <p class="t t-es">Cuando alguien muere sin testamento — lo que se denomina morir "intestado" — las leyes de intestado de Florida determinan quién hereda. Esto puede no reflejar lo que el difunto hubiera querido, y el proceso puede ser más complicado y disputado.</p>
+    </div>
+
+    <h2 class="t t-en">Can Probate Be Avoided?</h2>
+    <h2 class="t t-es">¿Se Puede Evitar la Sucesión?</h2>
+
+    <ul class="t t-en">
+        <li>Create a <strong>revocable living trust</strong> and transfer assets into it</li>
+        <li>Title real property with <strong>joint tenancy with rights of survivorship</strong></li>
+        <li>Use <strong>payable-on-death</strong> or <strong>transfer-on-death</strong> designations on accounts</li>
+        <li>Keep beneficiary designations on life insurance and retirement accounts updated</li>
+    </ul>
+    <ul class="t t-es">
+        <li>Crear un <strong>fideicomiso en vida revocable</strong> y transferir bienes a él</li>
+        <li>Titular bienes inmuebles con <strong>copropiedad con derechos de supervivencia</strong></li>
+        <li>Usar designaciones de <strong>pago al fallecimiento</strong> o <strong>transferencia al fallecimiento</strong> en cuentas</li>
+        <li>Mantener actualizadas las designaciones de beneficiarios en seguros de vida y cuentas de jubilación</li>
+    </ul>
+
+    <div class="article-cta">
+        <h3 class="t t-en">Protecting your family starts <em>now.</em></h3>
+        <h3 class="t t-es">Proteger a su familia comienza <em>ahora.</em></h3>
+        <p class="t t-en">Whether you need guidance through the probate process or want to plan ahead so your family avoids it entirely, Abascal Law is here to help — in English and Spanish.</p>
+        <p class="t t-es">Ya sea que necesite orientación durante el proceso de sucesión o quiera planificar con anticipación para que su familia lo evite por completo, Abascal Law está aquí para ayudar — en inglés y en español.</p>
+        <a class="cta-btn" href="https://abascallaw.as.me/schedule/08b5b297/appointment/90611465/calendar/13793433" target="_blank">
+            <span class="t t-en">Schedule a Free Consultation →</span>
+            <span class="t t-es">Agendar Consulta Gratuita →</span>
+        </a>
+    </div>
+</div>
+
+<script>
+    function setLang(lang) {
+        document.documentElement.setAttribute('data-lang', lang);
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    }
+</script>
+</body>
+</html>
