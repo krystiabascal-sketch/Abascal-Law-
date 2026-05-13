@@ -112,10 +112,11 @@
         .hero {
             display: grid;
             grid-template-columns: 3fr 2fr;
+            grid-template-rows: 1fr auto;
             min-height: 88vh;
         }
 
-        .hero-left { position: relative; overflow: hidden; }
+        .hero-left { position: relative; overflow: hidden; grid-row: 1 / 3; }
 
         .hero-img-main {
             width: 100%; height: 100%;
@@ -143,14 +144,15 @@
 
         .hero-right {
             display: flex; flex-direction: column;
-            padding: 2.5rem 2.5rem 2.5rem 2rem;
+            padding: 0 2.5rem 2.5rem 2rem;
             background: var(--cream); justify-content: flex-end;
         }
 
         .hero-thumb {
-            width: 58%; aspect-ratio: 3/4; align-self: flex-end;
+            width: 58%; aspect-ratio: 3/4;
+            justify-self: end; align-self: end;
+            margin: 0 2.5rem 2.5rem 0;
             background: url('krysti-portrait.jpg') center top / cover no-repeat;
-            margin-bottom: 2.5rem;
         }
 
         .hero-headline {
@@ -607,10 +609,10 @@
         @media (max-width: 960px) {
             nav { padding: 1rem 1.5rem; }
             .nav-links { display: none; }
-            .hero { grid-template-columns: 1fr; min-height: unset; }
-            .hero-left { height: 55vh; }
-            .hero-right { padding: 2rem 1.5rem; }
-            .hero-thumb { display: none; }
+            .hero { grid-template-columns: 1fr 1fr; grid-template-rows: 42vh auto; min-height: unset; }
+            .hero-left { grid-column: 1; grid-row: 1; height: auto; }
+            .hero-thumb { grid-column: 2; grid-row: 1; width: 100%; height: 100%; aspect-ratio: unset; justify-self: unset; align-self: unset; margin: 0; }
+            .hero-right { grid-column: 1 / 3; grid-row: 2; padding: 2rem 1.5rem; justify-content: flex-start; }
             .practice-cards { grid-template-columns: 1fr 1fr; }
             .editorial { grid-template-columns: 1fr; }
             .editorial-img { height: 48vh; order: -1; }
@@ -678,8 +680,8 @@
                 </div>
             </div>
         </div>
+        <div class="hero-thumb"></div>
         <div class="hero-right">
-            <div class="hero-thumb"></div>
             <h1 class="hero-headline">
                 <span class="t t-en">Helping families secure <em>status,</em> property, and inheritance.</span>
                 <span class="t t-es">Ayudando a familias a asegurar <em>estatus,</em> propiedad y herencia.</span>
@@ -1058,9 +1060,9 @@
                     <span class="t t-en">Sign up and receive our monthly legal brief.</span>
                     <span class="t t-es">Regístrese y reciba nuestro resumen legal mensual.</span>
                 </div>
-                <form class="newsletter-form" onsubmit="return false;">
-                    <input class="newsletter-input" type="email" placeholder="your@email.com">
-                    <button class="newsletter-btn">
+                <form class="newsletter-form" id="newsletter-form" onsubmit="submitNewsletter(event);">
+                    <input class="newsletter-input" type="email" placeholder="your@email.com" required>
+                    <button class="newsletter-btn" type="submit">
                         <span class="t t-en">Subscribe →</span>
                         <span class="t t-es">Suscribirse →</span>
                     </button>
@@ -1068,6 +1070,16 @@
                 <div class="newsletter-note">
                     <span class="t t-en">No spam, ever. Unsubscribe at any time.</span>
                     <span class="t t-es">Sin spam, nunca. Cancele en cualquier momento.</span>
+                </div>
+                <div id="newsletter-thanks" style="display:none; margin-top:1rem;">
+                    <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:1.15rem; font-weight:300; margin-bottom:0.4rem;">
+                        <span class="t t-en">Thank you for subscribing.</span>
+                        <span class="t t-es">Gracias por suscribirse.</span>
+                    </div>
+                    <div style="font-size:0.82rem; color:rgba(250,248,244,0.5); line-height:1.7;">
+                        <span class="t t-en">We appreciate your trust. You will receive our monthly legal brief with insights on immigration, estate planning, and business law — written just for you.</span>
+                        <span class="t t-es">Agradecemos su confianza. Recibirá nuestro resumen legal mensual con información sobre inmigración, planificación patrimonial y derecho empresarial — escrito especialmente para usted.</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1118,6 +1130,13 @@
     </footer>
 
     <script>
+        function submitNewsletter(e) {
+            e.preventDefault();
+            document.getElementById('newsletter-form').style.display = 'none';
+            document.querySelector('.newsletter-note').style.display = 'none';
+            document.getElementById('newsletter-thanks').style.display = 'block';
+        }
+
         function toggleCard(el) {
             const expand = el.nextElementSibling;
             const arr = el.querySelector('.card-arr');
